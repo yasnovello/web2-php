@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+<form action="delete_produto.php">
 <?php
 include_once("conexao.php");
 $sql =
@@ -33,8 +33,8 @@ if ($result = mysqli_query($connection, $sql)) {
             echo "<td>" . $row['nome'] . "</td>";
             echo "<td>" . $row['descricao'] . "</td>";
             echo "<td>" . $row['preco'] . "</td>";
-            echo "<td> <button type='button' class='btn btn-outline-warning'>Atualizar</button> </td>";
-            echo "<td> <button type='button' class='btn btn-outline-danger'>Deletar</button> </td>";
+            echo "<td> <a type='button' href='atualizarProduto.php'  class='btn btn-outline-warning'>Atualizar</a> </td>";
+            echo "<td> <button type='submit' class='btn btn-outline-danger'>Deletar</button> </td>";
 
 
             echo "</tr>";
@@ -51,6 +51,7 @@ if ($result = mysqli_query($connection, $sql)) {
 // Close connection
 mysqli_close($connection);
 ?>
+</form>
     <!-- <form action="post_user.php" method="POST">
         Nome: <input type="text" name="nome"><br><br>
         E-mail: <input type="email" name="email"><br><br>
