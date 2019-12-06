@@ -1,7 +1,7 @@
 <?php
 include_once("conexao.php");
 $sql =
-    "SELECT * FROM usuario";
+    "SELECT * FROM produtos";
 if ($result = mysqli_query($connection, $sql)) {
     if (mysqli_num_rows($result) > 0) {
         echo "<table>";
@@ -12,7 +12,7 @@ if ($result = mysqli_query($connection, $sql)) {
         while ($row = mysqli_fetch_array($result)) {
             echo "<tr>";
             echo "<td>" . $row['nome'] . "</td>";
-            echo "<td>" . $row['email'] . "</td>";
+            echo "<td>" . $row['descricao'] . "</td>";
             echo "</tr>";
         }
         echo "</table>";

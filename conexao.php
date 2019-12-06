@@ -3,7 +3,7 @@
 $server = 'localhost';
 $user = 'root';
 $password = '';
-$db = 'aulaphp';
+$db = 'web2php';
 
 $connection = mysqli_connect($server,$user,$password,$db);
 // if(!$connection){
