@@ -3,6 +3,8 @@
     $id = $_GET['id'];
     $sql_delete = "DELETE FROM produtos WHERE id = '$id'";
     $result_query = mysqli_query($connection, $sql_delete);
+    //echo "<script>alert('Mensagem');</script>";
+    header("Location: ../web2-php/");
 ?>
 
 <!-- <?php include_once("conexao.php");

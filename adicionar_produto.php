@@ -5,4 +5,5 @@
     $preco = $_POST['preco'];
     $sql_insert = "INSERT INTO produtos ( nome, descricao,preco) VALUES ('$nome', '$descricao','$preco')";
     $result_query = mysqli_query($connection, $sql_insert);
+    header("Location: ../web2-php/");
 ?>

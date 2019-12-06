@@ -16,7 +16,7 @@
 <section>
     <div class="container col-lg-6 py-5">
         <h3 class="text-center">Adicionar Novo Produto</h3>
-    <form action="post_user.php" method="POST">
+    <form action="adicionar_produto.php" method="POST">
         <div class="form-group">
             <label>Nome</label>
             <input type="text" class="form-control" id="nome" name='nome'>
