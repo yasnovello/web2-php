@@ -27,7 +27,7 @@ if ($result = mysqli_query($connection, $sql)) {
         echo "<th>Nome</th>";
         echo "<th>Descrição</th>";
         echo "<th>Preço</th>";
-        echo "<th class='text-right' >Ações</th>";
+        echo "<th class='text-center' >  Ações</th>";
         echo "</tr>";
         while ($row = mysqli_fetch_array($result)) {
             echo "<tr>";
@@ -35,8 +35,8 @@ if ($result = mysqli_query($connection, $sql)) {
             echo "<td>" . $row['nome'] . "</td>";
             echo "<td>" . $row['descricao'] . "</td>";
             echo "<td>" . $row['preco'] . "</td>";
-            echo '<td> <input type="button" class="btn btn-outline-warning" aria-label="Atualizar" value="Atualizar" href="atualizarProduto.php?id=' . $row['id'] .'&nome=' . $row['nome'] .'&preco=' . $row['id'] .'&descricao=' . $row['id'] .' "> </td>';
-            echo '<td> <input type="button" class="btn btn-outline-danger" aria-label="Deletar" value="Deletar" href="delete_produto.php?id=' . $row['id'] .'&nome=' . $row['nome'] .'&preco=' . $row['id'] .'&descricao=' . $row['id'] .' "></td>';
+            echo '<td> <a type="submit" class="btn btn-outline-warning" href="atualizarProduto.php?id=' . $row['id'] .'&nome=' . $row['nome'] .'&preco=' . $row['id'] .'&descricao=' . $row['id'] .'">Atualizar</a> </td>';
+            echo '<td> <a type="submit" class="btn btn-outline-danger" href="delete_produto.php?id=' . $row['id'] .'&nome=' . $row['nome'] .'&preco=' . $row['id'] .'&descricao=' . $row['id'] .'">Deletar</a> </td>';
 
 
             echo "</tr>";
@@ -59,7 +59,7 @@ mysqli_close($connection);
         <input type="submit" value="Salvar">
     </form> -->
     <div>
-        <input class="btn btn-success" type="button" href="novoProduto.php" aria-label="Adicionar novo produto" value="Adicionar novo produto">
+        <a class="btn btn-success" type="button" href="novoProduto.php">Adicionar produto</a>
     </div>
 </div>
 </section>
