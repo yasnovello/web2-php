@@ -13,6 +13,9 @@
 
 <body>
 
+<section>
+    <div class="container col-lg-6 py-5">
+        <h3 class="text-center">Adicionar Novo Produto</h3>
     <form action="post_user.php" method="POST">
         <div class="form-group">
             <label>Nome</label>
@@ -29,8 +32,9 @@
         <button type="submit" class="btn btn-primary">Salvar</button>
 
     </form>
-    <a href="index.php">Go</a>
-
+    <a href="index.php">Listar Produtos</a>
+    </div>
+<section>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
