@@ -14,28 +14,30 @@
 <body>
 <div class="container col-lg-6 py-5">
         <h3 class="text-center">Atualizar produto</h3>
-    <form action="post_user.php" method="POST">
-    <div class="form-group">
-            <label><b>Id</b></label>
-            <input type="number" class="form-control" id="id" name='nome'>
-        </div>
+    <form action="update_produto.php" method="POST">
         <div class="form-group">
-            <label><b>Nome</b></label>
-            <input type="text" class="form-control" id="nome" name='nome'>
-        </div>
-        <div class="form-group">
-            <label><b>Preço</b></label>
-            <input type="number" class="form-control" id="preco" name="preco">
-        </div>
-        <div class="form-group">
-            <label><b>Descrição</b></label>
-            <input type="text" class="form-control" id="descricao" name="descricao">
-        </div>
+                <label><b>Id</b></label>
+                <input readonly="readonly" type="text" class="form-control" id="id" name="id" value="<?php echo $_GET['id'] ?>">
+            </div>
+            <div class="form-group">
+                <label><b>Nome</b></label>
+                <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $_GET['nome'] ?>">
+            </div>
+            <div class="form-group">
+                <label><b>Preço</b></label>
+                <input type="text" class="form-control" id="preco" name="preco" value="<?php echo $_GET['preco'] ?>">
+            </div>
+            <div class="form-group">
+                <label><b>Descrição</b></label>
+                <input type="text" class="form-control" id="descricao" name="descricao" value="<?php echo $_GET['descricao'] ?>">
+            </div>
 
-        <!-- <a <button type="submit" href="index.php" class="btn btn-primary"> Atualizar</button></a> -->
-        <a class="btn btn-primary" type="button" href="index.php">Atualizar</a>
-
+            <button type="submit" class="btn btn-primary"> Atualizar</button>
     </form>
+    <!-- <a class="btn btn-primary" type="button" href="update_produto.php">Atualizar</a> -->
+   <!-- <a type="button" class="btn btn-primary" href="update_produto.php?id=' . $row['id'] .'&nome=' . $row['nome'] .'&preco=' . $row['id'] .'&descricao=' . $row['id'] .'">Atualizar</a> </td>'; -->
+
+
 </div>
 
 
