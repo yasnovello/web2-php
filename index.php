@@ -33,7 +33,7 @@ if ($result = mysqli_query($connection, $sql)) {
             echo "<td>" . $row['nome'] . "</td>";
             echo "<td>" . $row['descricao'] . "</td>";
             echo "<td>" . $row['preco'] . "</td>";
-            echo '<td> <a type="button" class="btn btn-outline-warning" href="atualizarProduto.php?id=' . $row['id'] .'&nome=' . $row['nome'] .'&preco=' . $row['id'] .'&descricao=' . $row['id'] .'">Atualizar</a> </td>';
+            echo "<td> <button type='button' class='btn btn-outline-warning'>Atualizar</button> </td>";
             echo "<td> <button type='button' class='btn btn-outline-danger'>Deletar</button> </td>";
 
 
